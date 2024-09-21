@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 TOKEN = '7461354043:AAHXswmhPd3SoqaN0KtIVdRBwF8dUTeBat4'
 
 # Директория для хранения статистики
-STATS_DIR = '/home/Bayriron/bot'
+STATS_DIR = os.path.join(BASE_DIR, 'stats') 
 ANSWER_FILE = os.path.join(STATS_DIR, 'answers.json')
 STATS_FILE = os.path.join(STATS_DIR, 'stats.json')
 EXCEL_FILE = os.path.join(STATS_DIR, 'student_stats.xlsx')
@@ -171,12 +171,17 @@ async def send_test(chat_id, context: ContextTypes.DEFAULT_TYPE) -> None:
 
         user_states[user_id] = 'test_sent'  # Обновляем состояние пользователя
         file_paths = [
-            "/home/Bayriron/bot/1.png",
-            "/home/Bayriron/bot/2.png",
-            "/home/Bayriron/bot/3.png",
-            "/home/Bayriron/bot/4.png",
-            "/home/Bayriron/bot/5.png",
-            "/home/Bayriron/bot/6.png"
+           file_paths = [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png"
+]
 
         ]
         for file_path in file_paths:
